@@ -4,11 +4,13 @@
 ---
 
 ### AIM  
-To write a Python program to perform addition and division operations using a class. The class should be named `Saveetha`, and the function names should be `setvalues` (to set `a` and `b` values), `add`, and `div`. The program should handle the following cases:  
-- `choice 1` → Perform addition  
-- `choice 2` → Perform division  
-- `choice 0` → Exit  
-- For other choices, print 'Invalid choice'
+To write a python program to perform addition and division operation using class and if,elif..
+
+note:
+
+class name should be saveetha, function name should be setvalues( to set a and b values) add and div
+
+cases : choice 1 ->perform addition ,choice 2-> perform division ,  choice 0 -> exiting, other choices -> print 'invalid choice'
 
 ---
 
@@ -35,11 +37,43 @@ To write a Python program to perform addition and division operations using a cl
 ### PROGRAM
 
 ```
+class saveetha:
+    def setvalues(self):
+        self.a = int(input())
+        self.b = int(input())
 
+    def add(self):
+        result = self.a + self.b
+        print("Result: ", result)
+
+    def div(self):
+        if self.b != 0:
+            result = self.a // self.b
+            print("Result: ", result)
+        else:
+            print("Division by zero is not allowed.")
+
+# Create object
+obj = saveetha()
+obj.setvalues()
+
+while True:
+    choice = int(input())
+    if choice == 1:
+        obj.add()
+    elif choice == 2:
+        obj.div()
+    elif choice == 0:
+        print("Exiting!")
+        break
+    else:
+        print("Invalid choice")
 
 
 ```
 
 ### OUTPUT
+<img width="452" height="343" alt="image" src="https://github.com/user-attachments/assets/dea4a231-41c5-4cb1-bb14-ecfd28321208" />
 
 ### RESULT
+Thus a python program to perform addition and division operation using class and if,elif.. has been executed successfully.
